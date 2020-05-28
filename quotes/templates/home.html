@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+
+{% block titleblock %}
+Home: Stock Market
+{% endblock titleblock %}
+
+{% block content %}
+
+{% if api %}
+    {% if api == "Error..." %}
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+            <strong>Oops!</strong>There was a problem with your ticker symbol, Please try again.
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+    {% else %}
+        <h1>{{api.companyName}}</h1><br>
+<table class="table table-borderless">
+    <thead class="thead-light">
+        <tr>
+            <th scope="col">
+                <center>Stock Price &nbsp;<small>($)</small></center>
+            </th>
+            <th scope="col">
+                <center>Previous Close &nbsp;<small>($)</small></center>
+            </th>
+            <th scope="col">
+                <center>Market Cap &nbsp;<small>($)</small></center>
+            </th>
+            <th scope="col">
+                <center>YTD Change &nbsp;<small>(%)</small></center>
+            </th>
+            <th scope="col">
+                <center>52wk High &nbsp;<small>($)</small></center>
+            </th>
+            <th scope="col">
+                <center>52wk Low &nbsp;<small>($)</small></center>
+            </th>
+        </tr>
+    </thead>
+    <tbody>        
+        <tr class="text-center">
+            <td>{{api.latestPrice}}</td>
+            <td>{{api.previousClose}}</td>
+            <td>{{api.marketCap}}</td>
+            <td>{{api.ytdChange}}</td>
+            <td>{{api.week52High}}</td>
+            <td>{{api.week52Low}}</td>
+        </tr>
+    </tbody>
+</table>        
+    {% endif %}
+{% else %}
+    {% if ticker %}
+            <div class="alert alert-dark text-center" role="alert">
+                <h3>{{ticker}}</h3>
+            </div>
+    {% endif %}
+{% endif %}
+{% endblock content %}

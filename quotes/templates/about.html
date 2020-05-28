@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+
+{% block titleblock %}
+About: Stock Market App
+{% endblock titleblock %}
+
+{% block content %}
+
+<h1>Stock Market App</h1>
+<div class="row text-center">
+  <!-- Team item-->
+  <div class="col-xl-3 col-sm-6 m-4 profilebox">
+    <div class="bg-light rounded shadow py-5 px-4">
+      <img src="https://res.cloudinary.com/mhmd/image/upload/v1556834133/avatar-2_f8dowd.png" alt="" width="100"
+        class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm" />
+      <h5 class="mb-0">Marmik Patel</h5>
+      <span class="small text-uppercase text-muted">Django Developer</span> s
+      <ul class="social mb-0 list-inline mt-3">
+        <li class="list-inline-item">
+          <a href="https://www.facebook.com" class="social-link"><i class="fa fa-facebook-f"></i></a>
+        </li>
+        <li class="list-inline-item">
+          <a href="https://www.twitter.com" class="social-link"><i class="fa fa-twitter"></i></a>
+        </li>
+        <li class="list-inline-item">
+          <a href="https://www.instagram.com" class="social-link"><i class="fa fa-instagram"></i></a>
+        </li>
+        <li class="list-inline-item">
+          <a href="https://www.linkedin.com" class="social-link"><i class="fa fa-linkedin"></i></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <!-- End-->
+  <div class="vl">
+    <ul class="text-left">
+      <li class="list-group-item" style="font-size: 22px;">
+        <b>About Stock App</b>
+      </li>
+      <li class="list-group-item">
+       Stock App provides the latest stock market details.
+      </li>
+      <li class="list-group-item" style="font-size: 22px;">
+        <b>How to use?</b>
+      </li>
+      <li class="list-group-item">
+        It is simple to use this app, just write symbol name of company in the text box
+        and hit the Stock Quote button, that's it and you will get the stock detail of that company. You can add stocks to your portfolio by typing symbol name and clicking on Add stock button. Simillarly You can delete stock from your stock portfolio.
+      </li>
+      <li class="list-group-item">
+        <b>Created By:</b>&nbsp; Marmik Patel,&nbsp; Python,&nbsp; Django&nbsp;
+        Developer.
+      </li>
+    </ul>
+  </div>
+</div>
+<div class="col-12 text-center mt-5">
+  <a href="{% url 'home' %}" class="btn btn-outline-dark btn-lg btn-block">Get Stock Quote </a>
+</div>
+{% endblock content %}

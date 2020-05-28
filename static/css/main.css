@@ -1,0 +1,26 @@
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+/*About page css*/
+
+.profilebox:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.vl {
+    border-left: 6px solid green;
+    height: 370px;
+    position: relative;
+    left: 20px;
+    margin-left: -3px;
+    top: 8px;
+    margin: 0.5rem;
+    max-width: 750px;
+}
+
+.vl ul li:hover {
+    background-color: #F2F2F2;
+    cursor: pointer;
+}
